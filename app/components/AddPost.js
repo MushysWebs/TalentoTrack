@@ -16,23 +16,23 @@ const AddPost = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
 
     axios.post("/api/posts", {
       ...input,
-      releaseYear: parseInt(input.releaseYear, 10) || null
+      employeeWage: parseInt(input.employeeWage, 10) || null
     })
-    .then((res) => {
-      console.log(res);
-      setInput({});
-      setShowModal(false);
-      Router.refresh();
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+      .then((res) => {
+        console.log(res);
+        setInput({});
+        setShowModal(false);
+        Router.refresh();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-  
+
   return (
     <div>
       <button
@@ -46,26 +46,26 @@ const AddPost = () => {
           <h1 className="mb-10 font-bold">Add or Update a Post</h1>
           <input
             type="text"
-            placeholder="title"
-            name="title"
+            placeholder="Employee"
+            name="employeeName"
             className="w-full p-2 mb-3 rounded-2xl"
-            value={input.title}
+            value={input.employeeName}
             onChange={handleChange}
           />
           <input
             type="text"
-            placeholder="List of actors"
-            name="listOfActors"
+            placeholder="Position"
+            name="employeePosition"
             className="w-full p-2 mb-3 rounded-2xl"
-            value={input.listOfActors}
+            value={input.employeePosition}
             onChange={handleChange}
           />
           <input
             type="text"
-            placeholder="Release year"
-            name="releaseYear"
+            placeholder="Wage"
+            name="employeeWage"
             className="w-full p-2 mb-3 rounded-2xl"
-            value={input.releaseYear}
+            value={input.employeeWage}
             onChange={handleChange}
           />
           <button type="submit" className="bg-blue-700 text-white px-5 py-2 rounded-full">

@@ -78,7 +78,7 @@ const Post = ({ post }) => {
             <h1 className="mb-10 font-bold">Add or Update a Post</h1>
             <input
               type="text"
-              placeholder="employeeName"
+              placeholder="Employee Name"
               name="employeeName"
               className="w-full p-2 mb-3 rounded-2xl"
               value={postToEdit.employeeName}
@@ -86,7 +86,7 @@ const Post = ({ post }) => {
             />
             <input
               type="text"
-              placeholder="list of actors"
+              placeholder="Position"
               name="employeePosition"
               className="w-full p-2 mb-3 rounded-2xl"
               value={postToEdit.employeePosition}
@@ -94,7 +94,7 @@ const Post = ({ post }) => {
             />
             <input
               type="text"
-              placeholder="Release year"
+              placeholder="Wage"
               name="employeeWage"
               className="w-full p-2 mb-3 rounded-2xl"
               value={postToEdit.employeeWage}

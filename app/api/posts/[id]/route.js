@@ -23,16 +23,16 @@ export const PATCH = async (request, { params }) => {
     try {
         const body = await request.json();
         const { id } = params;
-        const { title, listOfActors, releaseYear } = body;
+        const { employeeName, employeePosition, employeeWage } = body;
 
         const updatedPost = await client.post.update({
             where: {
                 id
             },
             data: {
-                title,
-                listOfActors,
-                releaseYear
+                employeeName,
+                employeePosition,
+                employeeWage
             }
         });
         if (!updatedPost) {
