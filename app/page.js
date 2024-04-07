@@ -3,7 +3,7 @@ import AddPost from "./components/AddPost";
 import PostList from "./components/PostList";
 
 async function getData() {
-  const res = await fetch('https://movie-app-plum-alpha.vercel.app/api/posts', {cache: "no-cache"})
+  const res = await fetch('https://talento-track.vercel.app/api/posts', {cache: "no-cache"})
   if(!res.ok) {
     throw new Error("Failed to fetch data")
   }

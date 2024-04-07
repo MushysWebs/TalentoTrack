@@ -52,15 +52,15 @@ const Post = ({ post }) => {
   return (
     <li className="overflow-y-auto p-3 my-5rounded-xl border-2 m-5" key={post.id}>
       <h1>
-        <strong>Movie:</strong> {post.title}
+        <strong>Employee:</strong> {post.employeeName}
       </h1>
 
       <p>
-        <strong>List of Actors: </strong>{post.listOfActors}
+        <strong>Position: </strong>{post.employeePosition}
       </p>
 
       <p>
-        <strong>Release Year: </strong>{post.releaseYear}
+        <strong>Wage: </strong>{post.employeeWage}
       </p>
       <div className="pt-5">
         <button
@@ -78,26 +78,26 @@ const Post = ({ post }) => {
             <h1 className="mb-10 font-bold">Add or Update a Post</h1>
             <input
               type="text"
-              placeholder="title"
-              name="title"
+              placeholder="employeeName"
+              name="employeeName"
               className="w-full p-2 mb-3 rounded-2xl"
-              value={postToEdit.title}
+              value={postToEdit.employeeName}
               onChange={handleChange}
             />
             <input
               type="text"
               placeholder="list of actors"
-              name="listOfActors"
+              name="employeePosition"
               className="w-full p-2 mb-3 rounded-2xl"
-              value={postToEdit.listOfActors}
+              value={postToEdit.employeePosition}
               onChange={handleChange}
             />
             <input
               type="text"
               placeholder="Release year"
-              name="releaseYear"
+              name="employeeWage"
               className="w-full p-2 mb-3 rounded-2xl"
-              value={postToEdit.releaseYear}
+              value={postToEdit.employeeWage}
               onChange={handleChange}
             />
             <button type="submit" className="bg-blue-700 text-white px-5 py-2 rounded-full">
