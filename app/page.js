@@ -23,7 +23,7 @@ const page = async () => {
     const posts = await getData();
     console.log(posts);
     return (
-      <main className="flex min-h-screen flex-col justify-between p-24 h-14 ">
+      <main className="">
         <AddPost />
         <PostList post={posts} />
       </main>

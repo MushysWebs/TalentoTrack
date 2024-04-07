@@ -4,6 +4,8 @@ import Modal from "./Modal";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Post = ({ post }) => {
   console.log("I am in Post", post);
@@ -48,94 +50,124 @@ const Post = ({ post }) => {
         Router.refresh();
       });
   };
+  const pathname = usePathname();
+  console.log(pathname);
+  const navItems = [
+    { label: "Movie List", href: "/" },
+    { label: "About", href: "/about" },
+  ];
 
   return (
-    <li className="overflow-y-auto p-3 my-5rounded-xl border-2 m-5" key={post.id}>
-      <h1>
-        <strong>Employee:</strong> {post.employeeName}
-      </h1>
+    <div className="flex w-full min-h-screen m-0 p-0 bg-gray-900 text-white">
 
-      <p>
-        <strong>Position: </strong>{post.employeePosition}
-      </p>
+      <aside className="w-32 min-h-screen bg-gray-800 p-5">
+        <nav>
+          <ul className="space-y-2">
 
-      <p>
-        <strong>Wage: </strong>{post.employeeWage}
-      </p>
-      <div className="pt-5">
-        <button
-          className="text-white bg-blue-700 mr-3 px-5 rounded-full"
-          onClick={() => {
-            setShowModalEdit(true);
-            setPostToEdit(post);
-          }}
-        >
-          Edit
-        </button>
+            {navItems.map((item, index) => (
+              <li key={index} className="hover:bg-gray-700 p-2 rounded">
+                <Link href={item.href}>
+                  <div
+                    className={
+                      pathname === item.href ? "text-gray-700 bg-white hover:bg-gray-300 font-bold p-2 rounded-xl" : "text-white hover:bg-gray-300 hover:text-gray-700 font-bold p-2 rounded-xl"
+                    }>
+                    {item.label}
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
 
-        <Modal showModal={showModalEdit} setShowModal={setShowModalEdit}>
-          <form className="w-full px-5 pb-6" onSubmit={handleEditSubmit}>
-            <h1 className="mb-10 font-bold">Add or Update a Post</h1>
-            <input
-              type="text"
-              placeholder="Employee Name"
-              name="employeeName"
-              className="w-full p-2 mb-3 rounded-2xl"
-              value={postToEdit.employeeName}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              placeholder="Position"
-              name="employeePosition"
-              className="w-full p-2 mb-3 rounded-2xl"
-              value={postToEdit.employeePosition}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              placeholder="Wage"
-              name="employeeWage"
-              className="w-full p-2 mb-3 rounded-2xl"
-              value={postToEdit.employeeWage}
-              onChange={handleChange}
-            />
-            <button type="submit" className="bg-blue-700 text-white px-5 py-2 rounded-full">
-              submit
-            </button>
-          </form>
-        </Modal>
-        <button
-          className="text-white bg-red-700 mr-3 px-3 rounded-full"
-          onClick={() => setShowDeleteModal(true)}
-        >
-          Delete
-        </button>
-        <Modal showModal={showDeleteModal} setShowModal={setShowDeleteModal}>
-          <div className="flex flex-col items-start">
-            <h1 className="text-2xl pb-3">
-              Are you sure you want to delete this post?
-            </h1>
-            <div className="space-x-4">
-              <button
-                className="text-white bg-blue-700 mr-3 px-5 rounded-full"
-                onClick={() => handleDeletePost(post.id)}
-              >
-                {" "}
-                Yes
+
+      <li className="flex-1 overflow-y-auto p-3 rounded-xl border-2 border-gray-700" key={post.id}>
+        <h1>
+          <strong>Employee:</strong> {post.employeeName}
+        </h1>
+
+        <p>
+          <strong>Position: </strong>{post.employeePosition}
+        </p>
+
+        <p>
+          <strong>Wage: </strong>{post.employeeWage}
+        </p>
+        <div className="pt-5">
+          <button
+            className="text-white bg-blue-700 mr-3 px-5 rounded-full"
+            onClick={() => {
+              setShowModalEdit(true);
+              setPostToEdit(post);
+            }}
+          >
+            Edit
+          </button>
+
+          <Modal showModal={showModalEdit} setShowModal={setShowModalEdit}>
+            <form className="w-full px-5 pb-6" onSubmit={handleEditSubmit}>
+              <h1 className="mb-10 font-bold">Add or Update a Post</h1>
+              <input
+                type="text"
+                placeholder="Employee Name"
+                name="employeeName"
+                className="w-full p-2 mb-3 rounded-2xl"
+                value={postToEdit.employeeName}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                placeholder="Position"
+                name="employeePosition"
+                className="w-full p-2 mb-3 rounded-2xl"
+                value={postToEdit.employeePosition}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                placeholder="Wage"
+                name="employeeWage"
+                className="w-full p-2 mb-3 rounded-2xl"
+                value={postToEdit.employeeWage}
+                onChange={handleChange}
+              />
+              <button type="submit" className="bg-blue-700 text-white px-5 py-2 rounded-full">
+                submit
               </button>
-              <button
-                className="text-white bg-red-700 mr-3 px-5 rounded-full"
-                onClick={() => setShowDeleteModal(false)}
-              >
-                {" "}
-                No
-              </button>
+            </form>
+          </Modal>
+          <button
+            className="text-white bg-red-700 mr-3 px-3 rounded-full"
+            onClick={() => setShowDeleteModal(true)}
+          >
+            Delete
+          </button>
+          <Modal showModal={showDeleteModal} setShowModal={setShowDeleteModal}>
+            <div className="flex flex-col items-start">
+              <h1 className="text-2xl pb-3">
+                Are you sure you want to delete this post?
+              </h1>
+              <div className="space-x-4">
+                <button
+                  className="text-white bg-blue-700 mr-3 px-5 rounded-full"
+                  onClick={() => handleDeletePost(post.id)}
+                >
+                  {" "}
+                  Yes
+                </button>
+                <button
+                  className="text-white bg-red-700 mr-3 px-5 rounded-full"
+                  onClick={() => setShowDeleteModal(false)}
+                >
+                  {" "}
+                  No
+                </button>
+              </div>
             </div>
-          </div>
-        </Modal>
-      </div>
-    </li>
+          </Modal>
+        </div>
+      </li>
+    </div>
   );
 };
 

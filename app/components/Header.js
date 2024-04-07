@@ -11,10 +11,10 @@ const Header = () => {
   ];
   return (
 
-    <div className=" bg-gradient-to-r from-red-700 to-orange-400 m-auto">
+    <div className=" bg-gradient-to-r from-gray-300 to-gray-600 m-0 p-0">
 
-      <div className="flex justify-center">
-        <img src="/Movie-Hub.png" alt="Logo" className="mt-5 rounded-2xl" />
+      <div className="flex justify-start">
+        <img src="/TalentLogo.png" alt="Logo" className="w-1/5 mt-5 rounded-2xl" />
       </div>
       <div className="flex justify-center">
         <ul className="flex gap-5 p-10">
