@@ -34,7 +34,7 @@ const AddPost = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-300">
       <button
         onClick={() => setShowModal(true)}
         className=" bg-gradient-to-r from-rose-400 to-red-500 text-white p-3 cursor-pointer rounded-full"

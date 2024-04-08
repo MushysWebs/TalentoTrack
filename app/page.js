@@ -23,7 +23,7 @@ const page = async () => {
     const posts = await getData();
     console.log(posts);
     return (
-      <main className="">
+      <main>
         <AddPost />
         <PostList post={posts} />
       </main>

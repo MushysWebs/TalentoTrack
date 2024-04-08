@@ -7,9 +7,9 @@ const Sidebar = () => {
   const pathname = usePathname();
   
   const navItems = [
-    { label: "Movie List", href: "/" },
-    { label: "About", href: "/about" },
-    // Add more navigation items here
+    { label: "Employee's", href: "/" },
+    { label: "Admin", href: "/about" },
+     
   ];
 
   return (

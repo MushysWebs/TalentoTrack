@@ -51,8 +51,8 @@ const Post = ({ post }) => {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <li className="flex-1 overflow-y-auto p-3 rounded-xl border-2 border-gray-700" key={post.id}>
+    <div className="flex flex-col items-center bg-gray-300">
+      <li className="flex-1 overflow-y-auto p-3 rounded-xl border-2 border-gray-700 " key={post.id}>
         <h1>
           <strong>Employee:</strong> {post.employeeName}
         </h1>
