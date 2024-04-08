@@ -4,8 +4,7 @@ import Modal from "./Modal";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+
 
 const Post = ({ post }) => {
   console.log("I am in Post", post);
@@ -50,37 +49,9 @@ const Post = ({ post }) => {
         Router.refresh();
       });
   };
-  const pathname = usePathname();
-  console.log(pathname);
-  const navItems = [
-    { label: "Movie List", href: "/" },
-    { label: "About", href: "/about" },
-  ];
 
   return (
-    <div className="flex w-full min-h-screen m-0 p-0 bg-gray-900 text-white">
-
-      <aside className="w-32 min-h-screen bg-gray-800 p-5">
-        <nav>
-          <ul className="space-y-2">
-
-            {navItems.map((item, index) => (
-              <li key={index} className="hover:bg-gray-700 p-2 rounded">
-                <Link href={item.href}>
-                  <div
-                    className={
-                      pathname === item.href ? "text-gray-700 bg-white hover:bg-gray-300 font-bold p-2 rounded-xl" : "text-white hover:bg-gray-300 hover:text-gray-700 font-bold p-2 rounded-xl"
-                    }>
-                    {item.label}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </aside>
-
-
+    <div className="flex flex-col items-center">
       <li className="flex-1 overflow-y-auto p-3 rounded-xl border-2 border-gray-700" key={post.id}>
         <h1>
           <strong>Employee:</strong> {post.employeeName}
