@@ -13,7 +13,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
+model Employee {
   // we are mapping our id as mongobd is is _id
   id String @id @default(auto()) @map("_id") @db.ObjectId
   employeeName String?
