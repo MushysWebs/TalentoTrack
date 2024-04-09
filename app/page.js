@@ -4,21 +4,21 @@ import PostList from "./components/PostList";
 import LogInBtn from "./components/LogInBtn";
 
 
-// async function getData() {
-//   const res = await fetch('https://talento-track.vercel.app/api/posts', {cache: "no-cache"})
-//   if(!res.ok) {
-//     throw new Error("Failed to fetch data")
-//   }
-//   return res.json();
-// }
-
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/posts', {cache: "no-cache"})
+  const res = await fetch('https://talento-track.vercel.app/api/posts', {cache: "no-cache"})
   if(!res.ok) {
     throw new Error("Failed to fetch data")
   }
   return res.json();
 }
+
+// async function getData() {
+//   const res = await fetch('http://localhost:3000/api/posts', {cache: "no-cache"})
+//   if(!res.ok) {
+//     throw new Error("Failed to fetch data")
+//   }
+//   return res.json();
+// }
 
 const page = async () => {
   try {
