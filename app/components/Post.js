@@ -51,7 +51,9 @@ const Post = ({ post }) => {
   };
 
   return (
+
     <div className="flex flex-col items-center bg-gray-300">
+
       <li className="flex-1 overflow-y-auto p-3 rounded-xl border-2 border-gray-700 " key={post.id}>
         <h1>
           <strong>Employee:</strong> {post.employeeName}
@@ -62,7 +64,7 @@ const Post = ({ post }) => {
         </p>
 
         <p>
-          <strong>Wage: </strong>{post.employeeWage}
+          <strong>Comments: </strong>{post.employeeComments}
         </p>
         <div className="pt-5">
           <button
@@ -96,10 +98,10 @@ const Post = ({ post }) => {
               />
               <input
                 type="text"
-                placeholder="Wage"
-                name="employeeWage"
+                placeholder="Comments"
+                name="employeeComments"
                 className="w-full p-2 mb-3 rounded-2xl"
-                value={postToEdit.employeeWage}
+                value={postToEdit.employeeComments}
                 onChange={handleChange}
               />
               <button type="submit" className="bg-blue-700 text-white px-5 py-2 rounded-full">

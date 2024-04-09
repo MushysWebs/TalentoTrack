@@ -23,7 +23,7 @@ export const PATCH = async (request, { params }) => {
     try {
         const body = await request.json();
         const { id } = params;
-        const { employeeName, employeePosition, employeeWage } = body;
+        const { employeeName, employeePosition, employeeComments } = body;
 
         const updatedPost = await client.post.update({
             where: {
@@ -32,7 +32,7 @@ export const PATCH = async (request, { params }) => {
             data: {
                 employeeName,
                 employeePosition,
-                employeeWage
+                employeeComments
             }
         });
         if (!updatedPost) {

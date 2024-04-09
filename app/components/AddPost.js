@@ -20,7 +20,6 @@ const AddPost = () => {
 
     axios.post("/api/posts", {
       ...input,
-      employeeWage: parseInt(input.employeeWage, 10) || null
     })
       .then((res) => {
         console.log(res);
@@ -37,7 +36,7 @@ const AddPost = () => {
     <div className="bg-gray-300">
       <button
         onClick={() => setShowModal(true)}
-        className=" bg-gradient-to-r from-rose-400 to-red-500 text-white p-3 cursor-pointer rounded-full"
+        className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
       >
         Add New Post
       </button>
@@ -62,10 +61,10 @@ const AddPost = () => {
           />
           <input
             type="text"
-            placeholder="Wage"
-            name="employeeWage"
+            placeholder="Comments"
+            name="employeeComments"
             className="w-full p-2 mb-3 rounded-2xl"
-            value={input.employeeWage}
+            value={input.employeeComments}
             onChange={handleChange}
           />
           <button type="submit" className="bg-blue-700 text-white px-5 py-2 rounded-full">

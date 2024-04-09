@@ -4,12 +4,12 @@ import { NextResponse } from "next/server";
 export const POST = async (req) => {
   try {
     const body = await req.json();
-    const { employeeName, employeePosition, employeeWage } = body;
+    const { employeeName, employeePosition, employeeComments } = body;
     const newPost = await client.post.create({
       data: {
         employeeName,
         employeePosition,
-        employeeWage
+        employeeComments
       },
     });
     return NextResponse.json(newPost);
@@ -23,16 +23,16 @@ export const POST = async (req) => {
 
 export const GET = async () => {
   try {
-    
+
     const posts = await client.post.findMany({
       orderBy: {
-        createdAt: 'desc', 
+        createdAt: 'desc',
       },
     });
-    return NextResponse.json(posts); 
+    return NextResponse.json(posts);
   } catch (error) {
-    
-    return NextResponse.json({ message: "Error getting posts", error }, 
-    { status: 500 });
+
+    return NextResponse.json({ message: "Error getting posts", error },
+      { status: 500 });
   }
 };
