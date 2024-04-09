@@ -10,7 +10,7 @@ const Header = () => {
       <div className="flex justify-start">
         <img src="/TalentLogo.png" alt="Logo" className="w-1/5 mt-2 mb-2 ml-2 rounded-2xl" />
       </div>
-      <Navbar /> {/* Add the Navbar component here */}
+      <Navbar /> 
     </div>
   );
 };

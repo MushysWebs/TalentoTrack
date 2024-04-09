@@ -6,7 +6,6 @@ import Navbar from '@/app/components/Navbar';
 function MyApp({ Component, pageProps }) {
   return (
     <SessionProvider session={pageProps.session}>
-      <Navbar />
       <Component {...pageProps} />
     </SessionProvider>
   );

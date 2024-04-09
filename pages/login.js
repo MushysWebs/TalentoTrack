@@ -7,7 +7,7 @@ export default function Home() {
     
     <div className="grid place-items-center h-screen -mt-24">
       <UserInfo/>
-      <Layout/>
+      {/* <Layout/> */}
     </div>
   );
 }

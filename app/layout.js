@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import EmpHours from "./components/EmpHours";
 import { NextAuthProviders } from "./providers";
-import Navbar from "./components/Navbar"; // Import the Navbar component
+
 import "./globals.css";
 
 export default function RootLayout({ children }) {
