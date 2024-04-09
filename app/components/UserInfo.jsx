@@ -1,24 +1,26 @@
-'use client'
-import React from 'react'
-import LogInBtn from './LogInBtn'
-import { useSession } from 'next-auth/react'
-import Image from 'next/image'
+import React from 'react';
+import { useSession, signIn } from 'next-auth/react';
+import Image from 'next/image';
 
 const UserInfo = () => {
-  const {status, data : session } = useSession();
-  return status === 'authenticated' ? (
-    <div className="flex flex-col items-center gap-4 shadow-md p-5">
-      <Image 
-        src={session.user.image}
-        alt="User Image"
-        width={40}
-        height={40}
-        className='w-10 h-10 rounded-full'
-      /> 
-      <span className='text-xl font-bold'>{session?.user?.name}</span>
-      <span className='font-bold'>{session?.user?.email}</span>
-    </div>
-  ): (<LogInBtn />)
-}
+  const { status, data: session } = useSession();
+  
+  // Redirect user to the root page if authenticated
+  if (status === 'authenticated') {
+    // You can also use router for redirection
+    if (typeof window !== 'undefined') {
+      window.location.href = '/';
+    }
+    return null; // Return null as you're redirecting
+  }
 
-export default UserInfo
+  // Display login button if not authenticated
+  return (
+    <button className='flex items-center gap-4 shadow-xl rounded-lg pl-3' onClick={()=> signIn('google')}>
+        <Image src="/google-logo.png" alt="Google icon" width={30} height={30} />
+        <span className='bg-blue-500 text-white px-4 py-3'>Sign in with Google</span>
+        </button>
+  );
+};
+
+export default UserInfo;
