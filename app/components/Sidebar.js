@@ -9,7 +9,8 @@ const Sidebar = () => {
   const navItems = [
     { label: "Employee's", href: "/" },
     { label: "Admin", href: "/about" },
-     
+    { label: "Login", href: "/login" },
+    // Add more navigation items here
   ];
 
   return (

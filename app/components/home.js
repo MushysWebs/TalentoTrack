@@ -1,7 +1,7 @@
 'use client'
-import AddPost from "./components/AddPost";
-import PostList from "./components/PostList";
-import LogInBtn from "./components/LogInBtn";
+import AddPost from "./AddPost";
+import PostList from "./PostList";
+import UserInfo from "./UserInfo";
 
 
 // async function getData() {
@@ -20,12 +20,12 @@ async function getData() {
   return res.json();
 }
 
-const page = async () => {
+const home = async () => {
   try {
     const posts = await getData();
     console.log(posts);
     return (
-      <main>
+      <main className="">
         <AddPost />
         <PostList post={posts} />
       </main>
@@ -38,4 +38,4 @@ const page = async () => {
 }
 
 
-export default page;
+export default home;
