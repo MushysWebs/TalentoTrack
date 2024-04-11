@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-import EmpHours from "./components/EmpHours";
+import EmpHours from "../pages/EmpHours";
 import { NextAuthProviders } from "./providers";
 
 import "./globals.css";

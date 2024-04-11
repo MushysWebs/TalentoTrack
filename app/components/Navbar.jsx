@@ -16,8 +16,8 @@ const Navbar = () => {
     <div className='flex items-center'> 
       {status === 'authenticated' ? (
         <React.Fragment>
-          <span className='text-blue-700 px-5'>{session.user.name}</span>
-          <button className='bg-slate-400 text-yellow-50 px-6 py-1 rounded-lg' onClick={handleSignOut}>Log Out</button>
+          <span className='text-white px-5'><strong>{session.user.name}</strong></span>
+          <button className='bg-red-700 text-yellow-50 px-6 py-1 rounded-lg' onClick={handleSignOut}>Log Out</button>
         </React.Fragment>
       ) : (
         <button className='hidden'></button>

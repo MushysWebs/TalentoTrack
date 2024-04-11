@@ -16,12 +16,12 @@ const UserInfo = () => {
 
   // Display login button if not authenticated
   return (
-    <div className='border-solid bg-slate-100 p-11 rounded-xl '>
-      <p>Welcome to TalentoTrack</p>
-    <button className='flex items-center gap-4 shadow-xl rounded-lg pl-3' onClick={()=> signIn('google')}>
-        <Image src="/google-logo.png" alt="Google icon" width={30} height={30} />
+    <div className='border-solid bg-slate-100 p-11 rounded-xl text-center shadow-lg'> {/* Added shadow-lg class */}
+      <p className="text-2xl font-bold mb-6">Welcome to TalentoTrack</p>
+      <button className='flex items-center gap-4 shadow-xl rounded-lg pl-3' onClick={()=> signIn('google')}>
+        <Image src="/google-logo.png" alt="Google icon" width={45} height={30} className='mr-3 ml-3'/>
         <span className='bg-blue-500 text-white px-4 py-3'>Sign in with Google</span>
-        </button>
+      </button>
     </div>
   );
 };
