@@ -2,7 +2,7 @@ import React from 'react';
 import { useSession, signIn } from 'next-auth/react';
 import Image from 'next/image';
 
-const UserInfo = () => {
+const Login = () => {
   const { status, data: session } = useSession();
   
   // Redirect user to the root page if authenticated
@@ -26,4 +26,4 @@ const UserInfo = () => {
   );
 };
 
-export default UserInfo;
+export default Login;

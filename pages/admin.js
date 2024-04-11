@@ -3,29 +3,38 @@ import Layout from "../app/layoutAdmin";
 import { getSession } from 'next-auth/react';
 
 const Admin = () => {
+  // Define state to hold the user session information
   const [session, setSession] = useState(null);
 
+  // Fetch the user session when the component mounts
   useEffect(() => {
+    // Define an asynchronous function to fetch the user session
     const fetchData = async () => {
+      // Call the getSession function to get the user session
       const userSession = await getSession();
+      // Set the user session in the component state
       setSession(userSession);
     };
 
+    // Call the fetchData function when the component mounts
     fetchData();
   }, []);
 
+  // If the user session is not available, render a message prompting the user to log in
   if (!session) {
     return (
+      // Render the layout component and center the message vertically and horizontally on the screen
       <Layout>
         <div className="flex items-center justify-center h-screen">
           <div className="text-center">
+            {/* Display the message to prompt the user to log in */}
             <p className="text-lg font-semibold mb-2">Please log in to access this page.</p>
           </div>
         </div>
       </Layout>
     );
   }
-
+  // If the user session is available, render the main content of the admin page
   return (
     <Layout>
       <main className="flex flex-col justify-between p-24 min-h-screen">
