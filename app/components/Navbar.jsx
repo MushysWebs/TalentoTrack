@@ -17,7 +17,7 @@ const Navbar = () => {
       {status === 'authenticated' ? (
         <React.Fragment>
           <span className='text-white px-5'><strong>{session.user.name}</strong></span>
-          <button className='bg-red-700 text-yellow-50 px-6 py-1 rounded-lg' onClick={handleSignOut}>Log Out</button>
+          <button className='bg-red-700 text-yellow-50 px-6 py-1 rounded-lg hover:bg-red-900' onClick={handleSignOut}>Log Out</button>
         </React.Fragment>
       ) : (
         <button className='hidden'></button>

@@ -26,7 +26,7 @@ const Sidebar = () => {
           {navItems.map((item, index) => (
             // Render item only if the href is not null
             item.href && (
-              <li key={index} className="hover:bg-gray-700 p-2 rounded">
+              <li key={index} className="p-2 rounded">
                 <Link href={item.href}>
                   <div
                     className={
