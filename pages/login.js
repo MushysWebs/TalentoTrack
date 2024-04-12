@@ -8,8 +8,8 @@ import Footer from "@/app/components/Footer";
 export default function Home() {
   return (
     <div className="bg-gray-200 ">
+      <Header />
       <div className="flex flex-col justify-center items-center min-h-screen ">
-        <Header />
         <div className="flex flex-col items-center justify-center flex-grow">
           <UserInfo />
         </div>

@@ -34,6 +34,25 @@ const Admin = () => {
       </Layout>
     );
   }
+
+  // Approved emails that can access the admin page
+  const approvedEmails = [""];
+
+  // Check if the user's email is in the list of approved emails
+  if (!approvedEmails.includes(session.user.email)) {
+    // If not approved, render access denied message
+    return (
+      <Layout>
+        <div className="flex items-center justify-center h-screen">
+          <div className="border-solid bg-gray-300 p-5 rounded-xl text-center shadow-lg">
+            <p className="text-lg font-semibold mb-2 text-red-500 ">You don't have sufficent permission please contact your administrator to acess this page.</p>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
+
   // If the user session is available, render the main content of the admin page
   return (
     <Layout>
