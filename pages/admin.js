@@ -26,9 +26,9 @@ const Admin = () => {
       // Render the layout component and center the message vertically and horizontally on the screen
       <Layout>
         <div className="flex items-center justify-center h-screen">
-          <div className="text-center">
+        <div className="border-solid bg-gray-300 p-5 rounded-xl text-center shadow-lg'">
             {/* Display the message to prompt the user to log in */}
-            <p className="text-lg font-semibold mb-2">Please log in to access this page.</p>
+            <p className="text-lg font-semibold mb-2">You currently don't have access to this page, Please log in to gain access.</p>
           </div>
         </div>
       </Layout>

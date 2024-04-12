@@ -17,8 +17,8 @@ const EmpHours = () => {
   if (!session) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <div className="text-center">
-          <p className="text-lg font-semibold mb-2">Please log in to access this feature.</p>
+        <div className="border-solid bg-gray-300 p-5 rounded-xl text-center shadow-lg'">
+        <p className="text-lg font-semibold mb-2">You currently don't have access to this page, Please log in to gain access.</p>
         </div>
       </div>
     );

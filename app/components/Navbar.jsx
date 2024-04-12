@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='flex items-center'> 
+    <div className='flex items-center mr-10'> 
       {status === 'authenticated' ? (
         <React.Fragment>
           <span className='text-white px-5'><strong>{session.user.name}</strong></span>
