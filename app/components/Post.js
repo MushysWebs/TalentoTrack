@@ -54,7 +54,8 @@ const Post = ({ post }) => {
 
     <div className="flex flex-col items-center bg-gray-300">
 
-      <li className="flex-1 overflow-y-auto p-3 rounded-xl border-2 border-gray-700 " key={post.id}>
+      <li className="flex-1 overflow-y-auto p-3 rounded-xl border-2 border-slate-300 bg-gray-100 " key={post.id}>
+        
         <h1>
           <strong>Employee:</strong> {post.employeeName}
         </h1>
@@ -68,7 +69,7 @@ const Post = ({ post }) => {
         </p>
         <div className="pt-5">
           <button
-            className="text-white bg-blue-700 mr-3 px-5 rounded-full"
+            className="text-white bg-blue-500 hover:bg-blue-700 mr-3 px-5 rounded-full"
             onClick={() => {
               setShowModalEdit(true);
               setPostToEdit(post);
@@ -104,13 +105,13 @@ const Post = ({ post }) => {
                 value={postToEdit.employeeComments}
                 onChange={handleChange}
               />
-              <button type="submit" className="bg-blue-700 text-white px-5 py-2 rounded-full">
+              <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white px-5 py-2 rounded-full">
                 submit
               </button>
             </form>
           </Modal>
           <button
-            className="text-white bg-red-700 mr-3 px-3 rounded-full"
+            className="text-white bg-red-500 hover:bg-red-700 mr-3 px-3 rounded-full"
             onClick={() => setShowDeleteModal(true)}
           >
             Delete
@@ -122,14 +123,14 @@ const Post = ({ post }) => {
               </h1>
               <div className="space-x-4">
                 <button
-                  className="text-white bg-blue-700 mr-3 px-5 rounded-full"
+                  className="text-white bg-blue-500 hover:bg-blue-700 mr-3 px-5 rounded-full"
                   onClick={() => handleDeletePost(post.id)}
                 >
                   {" "}
                   Yes
                 </button>
                 <button
-                  className="text-white bg-red-700 mr-3 px-5 rounded-full"
+                  className="text-white bg-red-500 hover:bg-red-700 mr-3 px-5 rounded-full"
                   onClick={() => setShowDeleteModal(false)}
                 >
                   {" "}
