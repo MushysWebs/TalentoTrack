@@ -13,7 +13,7 @@ const Sidebar = () => {
   };
 
   const navItems = [
-    { label: "Employee's", href: "/" },
+    { label: "Employee", href: "/" },
     { label: "Admin", href: "/admin" },
     { label: status === 'authenticated' ? 'Sign Out' : 'Login', href: status === 'authenticated' ? null : '/login', onClick: status === 'authenticated' ? handleSignOut : null },
     // Add more navigation items here
