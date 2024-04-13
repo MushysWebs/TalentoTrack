@@ -36,7 +36,7 @@ const Admin = () => {
   }
 
   // Approved emails that can access the admin page
-  const approvedEmails = [""];
+  const approvedEmails = ["lam.alexander@hotmail.com"];
 
   // Check if the user's email is in the list of approved emails
   if (!approvedEmails.includes(session.user.email)) {
