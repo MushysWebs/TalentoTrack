@@ -17,7 +17,6 @@ const AddPost = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
     axios.post("/api/posts", {
       ...input,
     })
