@@ -66,7 +66,7 @@ const Admin = () => {
           <p className="text-center">We know your just as excited about this as we are.</p>
         </section>
 
-        
+        <img src="user-icon-symbol-sign-vector-4137250163.jpg" width="200x" alt="Stock Image" className="mx-auto mb-5 rounded-full mt-6" />
 
         <h1 className='text-xl font-bold text-center' >Welcome {session.user.name}</h1>
         <p className="text-center">Manage Your Employees below</p>
@@ -77,7 +77,7 @@ const Admin = () => {
           <div className="p-5 shadow rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Lucas Miller</h2>
             <p className='text-xs' id='role'>Legal Counsel</p>
-            <img src="pictures/0o1a2787-813_SB_PM-1904783482.jpg" alt="Movie Hub" className="mx-auto mb-5 rounded-md mt-14" />
+            
             <div> {/* this is where we put the employee edit stuff */}
 
               <p>The salary of this employee is $<span id='salary'>40000</span></p>
@@ -97,7 +97,7 @@ const Admin = () => {
           <div className="p-4 shadow rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Ava Garcia</h2>
             <p className='text-xs' id='role'>Procurement Officer</p>
-            <img src="pictures/0o1a2787-813_dfxgvbfdvSB_PM-1904783482.jpg" alt="Movie Hub" className="mx-auto mb-5 rounded-md mt-14 " />
+            <img src="pictures/0o1a2787-813_dfxgvbfdvSB_PM-1904783482.jpg" alt="Stock Image" className="mx-auto mb-5 rounded-md mt-14 " />
             <div> {/* this is where we put the employee edit stuff */}
 
             <p>The salary of this employee is $<span id='salary'>27000</span></p>
@@ -117,7 +117,7 @@ const Admin = () => {
           <div className="p-4 shadow rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Mason Taylor</h2>
             <p className='text-xs' id='role'>Executive Assistant</p>
-            <img src="pictures/iStock_000019535606_Large-1634524114.jpg"  width="180px" alt="Movie Hub" className="mx-auto mb-5 rounded-md mt-14" />
+            <img src="pictures/iStock_000019535606_Large-1634524114.jpg"  width="180px" alt="Stock Image" className="mx-auto mb-5 rounded-md mt-14" />
             <div> {/* this is where we put the employee edit crap */}
 
             <p>The salary of this employee is $<span id='salary'>40000</span></p>
@@ -137,7 +137,7 @@ const Admin = () => {
           <div className="p-4 shadow rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Olivia Brown</h2>
             <p className='text-xs' id='role'>Receptionist</p>
-            <img src="pictures/0o1a2787-813_SB_PM-19047813482.jpg" alt="Movie Hub" className="mx-auto mb-5 rounded-md mt-14" />
+            <img src="pictures/0o1a2787-813_SB_PM-19047813482.jpg" alt="Stock Image" className="mx-auto mb-5 rounded-md mt-14" />
             <div> {/* this is where we put the employee edit crap */}
 
             <p>The salary of this employee is $<span id='salary'>40000</span></p>
@@ -160,7 +160,7 @@ const Admin = () => {
           <div className="p-5 rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Noah White</h2>
             <p className='text-xs' id='role'>Office Manager</p>
-            <img src="pictures/office-worker-3-3183730954.jpg" width="180px" alt="Movie Hub" className="mx-auto mb-5 rounded-md mt-14" />
+            <img src="pictures/office-worker-3-3183730954.jpg" width="180px" alt="Stock Image" className="mx-auto mb-5 rounded-md mt-14" />
             <div> {/* this is where we put the employee edit crap */}
 
             <p>The salary of this employee is $<span id='salary'>140000</span></p>
@@ -180,7 +180,7 @@ const Admin = () => {
           <div className="p-4 shadow rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Sophia Anderson</h2>
             <p className='text-xs'id='role'>Janitor</p>
-            <img src="pictures/Professional-Woman-248600703.jpg" width="190px" alt="Movie Hub" className="mx-auto mb-5 rounded-md mt-14" />
+            <img src="pictures/Professional-Woman-248600703.jpg" width="190px" alt="Stock Image" className="mx-auto mb-5 rounded-md mt-14" />
             <div> {/* this is where we put the employee edit crap */}
 
             <p>The salary of this employee is $<span id='salary'>10040000</span></p>
@@ -200,7 +200,7 @@ const Admin = () => {
           <div className="p-4 shadow rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Ethan Thompson</h2>
             <p className='text-xs' id='role'>Office Clerk</p>
-            <img src="pictures/white-collar-worker-job-office-businessperson-employment-sitting-desk-interior-design-business-learning-1557987-2204488740.jpg" width="180" alt="Movie Hub" className="mx-auto mb-5 rounded-md mt-14" />
+            <img src="pictures/white-collar-worker-job-office-businessperson-employment-sitting-desk-interior-design-business-learning-1557987-2204488740.jpg" width="180" alt="Stock Image" className="mx-auto mb-5 rounded-md mt-14" />
             <div> {/* this is where we put the employee edit crap */}
 
             <p>The salary of this employee is $<span id='salary'>4</span></p>
@@ -220,7 +220,7 @@ const Admin = () => {
           <div className="p-4 shadow rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Maya Ligma</h2>
             <p className='text-xs' id='role'>Administrative Assistant</p>
-            <img src="pictures/business-woman-smiling-front-corporate-team-together-looking-camera-office-company-multiethnic-people-standing-134234838-3819296572.jpg" alt="Movie Hub" className="mx-auto mb-5 rounded-md mt-14" width='170 px' />
+            <img src="pictures/business-woman-smiling-front-corporate-team-together-looking-camera-office-company-multiethnic-people-standing-134234838-3819296572.jpg" alt="Stock Image" className="mx-auto mb-5 rounded-md mt-14" width='170 px' />
             <div> {/* this is where we put the employee edit crap */}
 
             <p>The salary of this employee is $<span id='salary'>6900</span></p>
