@@ -15,7 +15,7 @@ const Sidebar = () => {
   const navItems = [
     { label: "Employee", href: "/" },
     { label: "Admin", href: "/admin" },
-    { label: "About", href: "/about"},
+
     { label: status === 'authenticated' ? 'Sign Out' : 'Login', href: status === 'authenticated' ? null : '/login', onClick: status === 'authenticated' ? handleSignOut : null },
     // Add more navigation items here
   ];
