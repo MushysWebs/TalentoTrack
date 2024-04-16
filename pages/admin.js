@@ -66,7 +66,7 @@ const Admin = () => {
           <p className="text-center">We know your just as excited about this as we are.</p>
         </section>
 
-        <img src="GenericHead.jpg" width="200x" alt="Stock Image" className="mx-auto mb-5 rounded-full mt-6" />
+        <img src="GenericHead.jpg" width="200x" alt="Generic Head" className="mx-auto mb-5 rounded-full mt-6" />
 
         <h1 className='text-xl font-bold text-center' >Welcome {session.user.name}</h1>
         <p className="text-center">Manage Your Employees below</p>
