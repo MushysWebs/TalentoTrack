@@ -77,7 +77,7 @@ const Admin = () => {
           <div className="p-5 shadow rounded hover:shadow-2xl">
             <h2 className="text-m font-semibold">Lucas Miller</h2>
             <p className='text-xs' id='role'>Legal Counsel</p>
-            
+            <img src="/pictures/0o1a2787-813_SB_PM-1904783482.jpg" alt="Stock Image" className="mx-auto mb-5 rounded-md mt-14 " />
             <div> {/* this is where we put the employee edit stuff */}
 
               <p>The salary of this employee is $<span id='salary'>40000</span></p>
